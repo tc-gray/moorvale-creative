@@ -16,7 +16,7 @@
     position: absolute;
     bottom: 8px;
     left: 16px;
-    color: #fff;
+    color: $white;
     font-size: 1rem;
     text-decoration: none;
     transition: transform 0.1s linear;
@@ -30,7 +30,7 @@
 .card__inner {
   width: 300px;
   height: 450px;
-  background-color: #078080;
+  background-color: $blue;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
   transition: all 0.2s cubic-bezier(0.5, 0, 0.5, 3);
 }
