@@ -51,3 +51,13 @@ nav {
 nav li:hover .navlink--hover {
   clip-path: polygon(0 80%, 100% 80%, 100% 100%, 0% 100%);
 }
+
+@media screen and (max-width: 600px) {
+  nav {
+    flex-wrap: wrap;
+  }
+
+  nav ul {
+    flex: 1;
+  }
+}
