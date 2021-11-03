@@ -1,5 +1,11 @@
-<h1>TESTING</h1>
+<h2>Our Projects</h2>
 
-<% @projects.each do |project| %>
-  <%= project.title %>
-<% end %>
+<div class="container">
+  <div class="row">
+    <% @projects.each do |project| %>
+      <div class="d-flex justify-content-center my-4 col-12 col-md-6 col-lg-4">
+        <%= render 'shared/card-project', project: project %>
+      </div>
+    <% end %>
+  </div>
+</div>

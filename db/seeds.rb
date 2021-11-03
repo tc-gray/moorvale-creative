@@ -16,7 +16,7 @@ puts "Database cleaned"
 
 puts "Creating Projects"
 
-4.times do
+20.times do
   Project.create!(
     title: Faker::Educator.subject,
     bio: Faker::Educator.degree ,
