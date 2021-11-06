@@ -32,7 +32,7 @@
   height: 450px;
   background-color: $blue;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
-  transition: all 0.2s cubic-bezier(0.5, 0, 0.5, 3);
+  transition: all 0.2s ease-in-out;
 }
 
 .card__content {
@@ -62,5 +62,4 @@
 
 .card__outer:hover .card__inner {
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-  transform: rotate(-1deg);
 }
