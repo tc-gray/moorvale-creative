@@ -1,9 +1,12 @@
-.cards__container {
+.cards-container {
+  // background-color: $dark-blue;
+  // padding: 64px;
+  // clip-path: polygon(0 0, 100% 4%, 96% 100%, 4% 96%);
+
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 2rem;
+  gap: 32px;
   place-items: center;
-  margin: 0 10vw;
 }
 
 .card__outer {
@@ -62,4 +65,20 @@
 
 .card__outer:hover .card__inner {
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+@media screen and (max-width: 1100px) {
+  .cards-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .cards-container {
+    display: block;
+  }
+
+  .card__outer {
+    margin: 32px auto;
+  }
 }
