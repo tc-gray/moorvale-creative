@@ -4,12 +4,14 @@ nav {
   align-items: center;
   padding: 16px;
   width: calc(100vw - 32px);
+  min-height: 10vh;
 
   ul {
     display: flex;
     justify-content: center;
     align-items: center;
     list-style-type: none;
+    margin: 0;
   }
 
   li {

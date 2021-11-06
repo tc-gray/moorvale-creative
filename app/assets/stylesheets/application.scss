@@ -22,3 +22,19 @@ html, body {
   min-height: 100vh;
   background-color: $white;
 }
+
+.container {
+  min-height: calc(60vh - 32px);
+}
+
+.flex-container--center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 600px) {
+  .flex-container--center {
+    display: block;
+  }
+}
