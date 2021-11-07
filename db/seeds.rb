@@ -21,7 +21,7 @@ puts "Creating Projects"
     title: Faker::Educator.subject,
     bio: Faker::Educator.degree ,
     content: Faker::Lorem.paragraph(sentence_count: 4),
-    current: true
+    current: [true, false].sample
   )
 end
 
