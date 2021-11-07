@@ -1,9 +1,39 @@
-<h2>Our Projects</h2>
-
 <div class="container">
+  <%= render 'shared/cards-tabs' %>
   <div class="cards-container">
     <% @projects.each do |project| %>
       <%= render 'shared/card-project', project: project %>
     <% end %>
   </div>
 </div>
+
+<script>
+  let current = true;
+  const cards = document.querySelectorAll('.card__link');
+  const tabs = document.querySelectorAll('.card-tab h5');
+
+  const toggleActiveTab = (e) => {
+    tabs.forEach((tab) => {
+      tab.parentElement.classList.remove('card-tab--active');
+    });
+    // console.log(e.target);
+    e.target.parentElement.classList.add('card-tab--active');
+
+    toggleActiveCards();
+  }
+
+  const toggleActiveCards = () => {
+    current = !current;
+    cards.forEach((card) => {
+      if (JSON.parse(card.dataset.current) != current) {
+        card.style.display = 'none';
+      } else {
+        card.style.display = 'inline';
+      }
+    });
+  }
+
+  tabs.forEach((tab) => {
+    tab.addEventListener('click', toggleActiveTab);
+  });
+</script>
