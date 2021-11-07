@@ -1,9 +1,12 @@
-.cards__container {
+.cards-container {
+  // background-color: $dark-blue;
+  // padding: 64px;
+  // clip-path: polygon(0 0, 100% 4%, 96% 100%, 4% 96%);
+
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 2rem;
+  gap: 32px;
   place-items: center;
-  margin: 0 10vw;
 }
 
 .card__outer {
@@ -32,7 +35,7 @@
   height: 450px;
   background-color: $blue;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
-  transition: all 0.2s cubic-bezier(0.5, 0, 0.5, 3);
+  transition: all 0.2s ease-in-out;
 }
 
 .card__content {
@@ -62,5 +65,20 @@
 
 .card__outer:hover .card__inner {
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-  transform: rotate(-1deg);
+}
+
+@media screen and (max-width: 1100px) {
+  .cards-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .cards-container {
+    display: block;
+  }
+
+  .card__outer {
+    margin: 32px auto;
+  }
 }
