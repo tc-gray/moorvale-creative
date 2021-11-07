@@ -1,10 +1,10 @@
-<%= link_to project_path(project), class: "card__link" do %>
+<%= link_to project_path(project), class: "card__link", data: { current: project.current } do %>
   <div class="card__outer">
     <div class="card__inner">
       <img src="https://source.unsplash.com/300x200?sig=<%= project.id %>">
       <div class="card__content">
-        <h3><%= project.title %></h3>
-        <p><%= project.content %></p>
+        <h4><%= project.title %></h4>
+        <p><%= project.bio %></p>
       </div>
     </div>
     <span>Read More</span>
