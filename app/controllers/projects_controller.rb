@@ -16,8 +16,24 @@ class ProjectsController < ApplicationController
   def create
     @project = Project.new(project_params)
     if @project.save
-      # redirect_to project_path(@project)
-      redirect_to root_path
+      redirect_to project_path(@project)
+    else
+      render :new
+    end
+  end
+
+  def destroy
+    @project.destroy
+    redirect_to projects_path
+  end
+
+  def edit
+    # find_project
+  end
+
+  def update
+    if @project.update(project_params)
+      redirect_to @project, notice: 'Product was successfully updated'
     else
       render :new
     end
