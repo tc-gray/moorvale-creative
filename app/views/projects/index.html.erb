@@ -1,6 +1,5 @@
-<h2>Our Projects</h2>
-
 <div class="container">
+  <%= render 'shared/cards-tabs' %>
   <div class="cards-container">
     <% @projects.each do |project| %>
       <%= render 'shared/card-project', project: project %>
