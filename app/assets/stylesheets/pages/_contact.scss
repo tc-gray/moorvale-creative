@@ -1,4 +1,14 @@
+.card-container--center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+
 .form__image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 32px;
   clip-path: polygon(0 0, 100% 4%, 96% 100%, 4% 96%);
 }
@@ -32,5 +42,11 @@
       background-color: $white;
       clip-path: polygon(0 0, 100% 4%, 96% 100%, 4% 96%);
     }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .card-container--center {
+    display: block;
   }
 }
